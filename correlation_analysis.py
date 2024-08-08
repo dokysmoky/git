@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 # Load the cleaned data
 df = pd.read_csv('cleaned_data.csv')
 
-# Compute the correlation matrix
-corr = df.corr()
+# Select only numeric columns
+numeric_df = df.select_dtypes(include=[float, int])
+
+# Compute the correlation matrix only on numeric columns
+corr = numeric_df.corr()
 
 # Plot the heatmap
 plt.figure(figsize=(10, 8))
