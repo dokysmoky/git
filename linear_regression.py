@@ -39,7 +39,6 @@ print(f"Mean Absolute Error (MAE): {mae:.2f}")
 print(f"Mean Squared Error (MSE): {mse:.2f}")
 print(f"R-squared (R^2): {r2:.2f}")
 
-# Optionally, you can save the model if needed
 import joblib
 joblib.dump(model, 'linear_regression_model.pkl')
 print("Model saved as 'linear_regression_model.pkl'")
